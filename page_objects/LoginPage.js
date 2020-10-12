@@ -45,7 +45,8 @@ function LoginPage () {
           browser.switchTo().window(parentWindow);
           console.log("Going back to the parent window " + "Logged to Real Synch");
       })
-    console.log('Then: Logged in')
+    console.log('Then: Logged in');
+    browser.sleep(5000);
   }
 };
 module.exports = new LoginPage
