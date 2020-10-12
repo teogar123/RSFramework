@@ -34,12 +34,24 @@ exports.config = {
     },
 
     onPrepare: function() {
-    var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
-    jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: 'all'}));
-    var AllureReporter = require('jasmine-allure-reporter');
-    jasmine.getEnv().addReporter(new AllureReporter({
-      resultsDir: 'allure-results'
-    }));
+        var AllureReporter = require('jasmine-allure-reporter');
+        jasmine.getEnv().addReporter(new AllureReporter());
+        jasmine.getEnv().beforeEach(function(done){
+          browser.takeScreenshot().then(function (png) {
+            allure.createAttachment('Screenshot', function () {
+              return new Buffer(png, 'base64')
+            }, 'image/png')();
+            done();
+          })
+        });
+        jasmine.getEnv().afterEach(function(done){
+            browser.takeScreenshot().then(function (png) {
+              allure.createAttachment('Screenshot', function () {
+                return new Buffer(png, 'base64')
+              }, 'image/png')();
+              done();
+            })
+          });
     
         browser.ignoreSynchronization = true
         setTimeout(function() {
