@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1602702888023' stop='1602702925642'>
+    <name>Given: I want to login</name>
+    <title>Given: I want to login</title>
+    <test-cases>
+        <test-case start='1602702888024' status='passed' stop='1602702925641'>
+            <name>Wnen: Fulfiing the login form</name>
+            <title>Wnen: Fulfiing the login form</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0c115a65-3694-4b95-88ce-ff126374efc8-attachment.png' type='image/png' size='26404'/>
+                <attachment title='Screenshot' source='428c77d0-c3f2-4e2d-9865-13cd1eb5d244-attachment.png' type='image/png' size='26585'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

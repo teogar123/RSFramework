@@ -1,17 +1,17 @@
 const env = require('node-env-file');
 env('.env');
 exports.config = {
-    seleniumAddress: 'http://localhost:4444/wd/hub',
+    seleniumAddress: 'http://72.14.184.50:4444/wd/hub',
 
     capabilities: {
         browserName: 'chrome',
         shardTestFiles: true,
         maxInstances: 1,
         chromeOptions: {
+          //'binary': "/usr/bin/google-chrome",
+          args: ['--no-sandbox'],
              
-            prefs: {
-                'profile.managed_default_content_settings.notifications': 1,
-            }
+           
         }
     },
     specs: [
