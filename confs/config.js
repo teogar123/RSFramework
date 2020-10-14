@@ -9,6 +9,7 @@ exports.config = {
         maxInstances: 1,
         chromeOptions: {
           //'binary': "/usr/bin/google-chrome",
+          //Args to opne chrome as sand bo intance
           args: ['--no-sandbox'],
              
            
@@ -17,9 +18,8 @@ exports.config = {
     specs: [
        
         '../tests/LoginTest.js'
-        
-        
-        
+           
+    
 ],
 
     // Set the Url where browser will start.
